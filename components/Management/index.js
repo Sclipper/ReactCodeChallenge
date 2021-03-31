@@ -17,9 +17,10 @@ const Management = ({ relations }) => {
     ...management,
     ...boardOfDirectors,
   ])
-  const keys = Object.keys(managementData[0])
+  const keys = managementData?.length ? Object.keys(managementData[0]) : []
   return (
     <div>
+      <h1 style={{ textAlign: "center" }}>Management</h1>
       <table>
         <thead>
           <tr>
